@@ -1,6 +1,6 @@
 module.exports = function check(str, bracketsConfig) {
-    let openingBrackets = bracketsConfig( (b) => b[0]);
-    let closingBrackets = bracketsConfig( (b) => b[1]);
+    let openingBrackets = bracketsConfig.map( (b) => b[0]);
+    let closingBrackets = bracketsConfig.map( (b) => b[1]);
     let stack = [];
 
     for (let currentChar of str)
